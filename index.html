@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://fontawesome.com/icons/check?f=classic&s=solid"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/form.css"> -->
+    <style>
+      *{
+        /* font-family: 'Poppins',sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.useful-links{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+}
+.useful-links a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.container form{
+    width: 90%;
+    max-width: 500px;
+    padding: 50px 30px 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.fa-paper-plane{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 26px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+label{
+  font-size: 15px;
+}
+.input-group span i {
+  color: seagreen;
+}
+.input-group span {
+  position:absolute;
+  bottom: 12px;
+  right: 17px;
+  font-size: 14px;
+  color: red;
+}
+#submit-error{
+  font-size: 14px;
+  color: red;
+}
+.input-group label{
+    flex-basis: 28%;
+}
+.input-group input, .input-group textarea{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;
+}
+::placeholder{
+    font-size: 14px;
+}
+:root{
+   --main-color:#247ba0;
+   --black:#222;
+   --white:#fff;
+   --tomato:#fd5e42;
+   --light-black:#777;
+   --light-white:#fff9;
+   --dark-bg:rgba(0,0,0,.7);
+   --light-bg:#eee;
+   --border:.1rem solid var(--main-color);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+   width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+   background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+section{
+   padding:5rem 10%;
+}
+
+@keyframes fadeIn {
+   0%{
+      transform: scale(0);
+      opacity: 0;
+   }
+}
+
+.heading{
+   background-size: cover !important;
+   background-position: center !important;
+   padding-top: 10rem;
+   padding-bottom:15rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.heading h1{
+   font-size: 10rem;
+   text-transform: uppercase;
+   color:var(--white);
+   text-shadow: var(--text-shadow);
+}
+
+.btn{
+   display: inline-block;
+   background: var(--tomato);
+   margin-top: 1rem;
+   color:var(--white);
+   font-size: 1.7rem;
+   padding:1rem 3rem;
+   cursor: pointer;
+}
+
+.btn:hover{
+   background: var(--main-color);
+}
+
+.heading-title{
+   text-align: center;
+   margin-bottom: 3rem;
+   font-size: 6rem;
+   text-transform: uppercase;
+   color:var(--black);
+}
+
+.header{
+   position: sticky;
+   top:0; left:0; right:0;
+   z-index: 1000;
+   background-color: var(--white);
+   display: flex;
+   padding-top: 0rem;
+   padding-bottom: 0rem;
+   box-shadow: var(--box-shadow);
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header .logo{
+   font-size: 2.5rem;
+   color:var(--black);
+}
+
+.header .navbar a{
+   font-size: 2rem;
+   margin-left: 2rem;
+   color:#247ba0;
+   text-transform: uppercase;
+}
+
+.header .navbar a:hover{
+   color:var(--tomato);
+}
+
+#menu-btn{
+   font-size: 2.5rem;
+   cursor: pointer;
+   color:var(--black);
+   display: none;
+}
+
+.home{
+   padding:0;
+}
+
+.home .slide{
+   text-align: center;
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-size: cover !important;
+   background-position: center !important;
+   min-height: 60rem;
+}
+
+.home .slide .content{
+   width: 85rem;
+   display: none;
+}
+
+.home .swiper-slide-active .content{
+   display: inline-block;
+}
+
+.home .slide .content span{
+   display: block;
+   font-size: 2.2rem;
+   padding-bottom: 1rem;
+   animation:fadeIn .2s linear backwards .2s;
+}
+
+.home .slide .content h3{
+   font-size: 5vw;
+   color:var(--white);
+   text-transform: uppercase;
+   line-height: 1;
+   text-shadow: var(--text-shadow);
+   padding:1rem 0;
+   animation:fadeIn .2s linear backwards .4s;
+}
+
+.home .slide .content .btn{
+   animation:fadeIn .2s linear backwards .6s;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev{
+   height: 5rem;
+   width: 5rem;
+   background: var(--tomato);
+   color:var(--white);
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover{
+   background: var(--main-color);
+   color:var(--white);
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after{
+   font-size: 2rem;
+}
+
+.home .swiper-button-prev{
+   right: 7rem;
+}
+button{
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+form button{
+    background: #141a34;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+.pop {
+    width: 350px;
+    background-color: rgb(228, 242, 201);
+    z-index: 99;
+    border-radius: 7px;
+    top: 41px;
+    left: 30px;
+    position: absolute;
+    transform: translate(15%,50%) scale(0.1);
+    text-align: center;
+    visibility: hidden;
+    padding: 0px 25px 25px;
+}
+button:hover{
+  color: black;
+  background-color: white;
+  transition: all 0.4s;
+}
+.openpop{
+    visibility: visible;
+    transform: translate(15%,50%) scale(1);
+    transition: all 0.3s;
+}
+p{
+    margin-top: 20px;
+    font-size: 15px;
+}
+h2{
+    margin-top: 18px;
+    font-size: 18px;
+}
+#bton{
+    width: 100px;
+    margin-top: 40px;
+    padding: 10px 0px;
+    background: rgb(188, 223, 70);
+    border: 0;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section class="header">
+
+    <a href="home.html" class="logo"><img src="images/logo.jpg"></a>
+ 
+    <nav class="navbar">
+       <a href="home.html">Home</a>
+       <a href="about.html">About</a>
+       <a href="package.html">Package</a>
+       <a href="index.html" class="active">Contact us</a>
+    </nav>
+ 
+    <div id="menu-btn" class="fas fa-bars"></div>
+ 
+ </section>
+  <div class="container">
+    <form action="https://formspree.io/f/xknlzvgz" method="post">
+      <i class="fas fa-paper-plane"></i>
+      <div  id="popY" class="pop">
+        <h2>Submitted</h2>
+        <p>Enjoy your journey, Thanks!</p>
+        <button class="button" id="buton">Ok</button>
+      </div>
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" id="contact-name" name="Name" required onkeyup="validateName()">
+        <span id="name-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="+91 XXXXXXXXXX" id="contact-phone" name="Phone" required onkeyup="validatePhone()">
+        <span id="phone-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="Enter Email" id="contact-email" name="Email" required onkeyup="validateEmail()">
+        <span id="email-error"></span>
+      </div>   
+
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea rows="5" placeholder="Enter your message" name="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
+        <span id="message-error"></span>
+      </div>
+    
+    <button onclick="return validateForm()" >Submit</button>
+    <span id="submit-error"></span>
+    
+  </form>
+  
+  </div>
+  <section class="footer">
+    <div class="box-container">
+       <div class="box">
+       <h3>quick links</h3>
+          <a href="home.html"> <i class="fas fa-angle-right"></i> home</a>
+          <a href="about.html"> <i class="fas fa-angle-right"></i> about</a>
+          <a href="package.html"> <i class="fas fa-angle-right"></i> package</a>
+          <a href="book.html"> <i class="fas fa-angle-right"></i> book</a>
+       </div>
+       <div class="box">
+          <h3>extra links</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+       </div>
+       <div class="box">
+       <h3>contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +91 8010358022 </a>
+          <a href="#"> <i class="fas fa-phone"></i> +111-2222-333333 </a>
+          <a href="#"> <i class="fas fa-envelope"></i> sakshipawar0313@gmail.com </a>
+          <a href="#"> <i class="fas fa-map"></i> Satara, Maharashtra - 415002 </a>
+       </div>
+       <div class="box">
+          <h3>follow us</h3>
+          <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+          <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+          <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+          <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+          <div><p>Please enter valid phone mumber</p></div>
+       </div>
+    </div>
+   
+ </section>
+   <script>
+    var buton = document.getElementById("buton")
+    var pop = document.getElementById("pop")
+var nameError = document.getElementById("name-error")
+var phoneError = document.getElementById("phone-error")
+var emailError = document.getElementById("email-error")
+var messageError = document.getElementById("message-error")
+var submitError = document.getElementById("submit-error")
+
+function openP (){
+  pop.classList.add("openpop")
+}
+function closeP(){
+  pop.classList.remove("openpop")
+}
+
+function validateName() 
+{
+  var name = document.getElementById("contact-name").value
+  if(name.length == 0)
+  {
+    nameError.innerHTML = "Name is required";
+    return false;
+  }
+  if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/))
+  {
+    nameError.innerHTML = "Write full name";
+    return false;
+  }
+  nameError.innerHTML = '<i class="fas fa-check-circle"></i>'
+  return true;
+}
+
+function validatePhone(){
+var phone = document.getElementById("contact-phone").value
+if (phone.length == 0) {
+  phoneError.innerHTML = 'Phone no is required'
+  return false;
+}
+if (phone.length == 0) {
+  phoneError.innerHTML = 'Phone no should be 10 digit'
+  return false;
+}
+if (!phone.match(/^\+91\s[789]\d{9}$/)) 
+{
+  phoneError.innerHTML = 'Phone no is required'
+  return false;
+}
+phoneError.innerHTML = '<i class="fas fa-check-circle"></i>'
+return true;
+}
+
+function validateEmail(){
+var email = document.getElementById("contact-email").value
+if(email.length == 0)
+{
+  emailError.innerHTML = "Email is required"
+  return false
+}
+if(!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))
+{
+  emailError.innerHTML = "Invalid Email"
+  return false
+}
+emailError.innerHTML = '<i class="fas fa-check-circle"></i>'
+return true;
+}
+function validateMessage(){
+var message = document.getElementById("contact-message").value
+var required = 10;
+var left = required - message.length
+if(left > 0)
+{
+  messageError.innerHTML = left +' More characters required';
+  return false
+}
+messageError.innerHTML = '<i class="fas fa-check-circle"></i>'
+return true;
+}
+function validateForm(){
+  if(!validateEmail() || !validatePhone() || !validateName() || !validateMessage())
+  {
+    submitError.style.display = "block"
+    submitError.innerHTML = "Invalid Credentials"
+    setTimeout(() => {
+      submitError.style.display = 'none'
+    }, 3000);
+    return false
+  }
+}
+   </script>
+</body>
+</html>

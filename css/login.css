@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+nav ul {
+    background-color: rgb(56, 177, 224);
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+}
+ul li{
+    list-style: none;
+    margin-left: 30px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+#form{
+    margin-top: 200px;
+    margin-left: 568px;
+    height: 40%;
+    width: 30%;
+    border: 2px solid black;
+    background: rgb(242, 192, 192);
+    border-radius: 10px;
+}
+input{
+    height: 46px;
+    width: 295px;
+    border-radius: 10px;
+}
+#username{
+    margin-left: 7px;
+    margin-top: 60px;  
+}
+#passWord{
+    margin-left: 11px; 
+    margin-top: 25px; 
+}
+label{
+    margin-left: 20px;
+    font-size: 18px;
+}
+#btn{
+    height: 40px;
+    width: 80px;
+    margin-left: 183px;
+    margin-top: 25px;
+    font-size: 16px;
+    border-radius: 9px;
+    margin-bottom: 35px;
+}
+#btn:hover{
+    background-color: rgb(148, 180, 240);
+    transition: all 1s;
+}
+#check{
+    right: 658px;
+    bottom: 196px;
+    position: absolute;
+    height: 46px;
+    width:17px;
+}
+
+.pop {
+    width: 350px;
+    background-color: rgb(218, 240, 176);
+    border-radius: 7px;
+    top: 234px;
+    left: 30px;
+    position: absolute;
+    transform: translate(167%,50%) scale(0.1);
+    text-align: center;
+    visibility: hidden;
+    padding: 0px 25px 25px;
+}
+#popY {
+    width: 350px;
+    background-color: rgb(218, 240, 176);
+    border-radius: 7px;
+    top: 600px;
+    left: 30px;
+    position: absolute;
+    transform: translate(167%,50%) scale(0.1);
+    text-align: center;
+    visibility: hidden;
+    padding: 0px 25px 25px;
+}
+.popE {
+    width: 350px;
+    background-color: rgb(241, 139, 139);;
+    border-radius: 7px;
+    top: 234px;
+    left: 30px;
+    position: absolute;
+    transform: translate(167%,50%) scale(0.1);
+    text-align: center;
+    visibility: hidden;
+    padding: 0px 25px 25px;
+}
+.openpop{
+    visibility: visible;
+    transform: translate(167%,50%) scale(1);
+    transition: all 0.3s;
+}
+.errorPop{
+    visibility: visible;
+    transform: translate(167%,50%) scale(1);
+    transition: all 0.3s;
+}
+p{
+    margin-top: 20px;
+}
+h2{
+    margin-top: 18px;
+}
+.bton{
+    width: 100px;
+    margin-top: 40px;
+    padding: 10px 0px;
+    background: rgb(188, 223, 70);
+    border: 0;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.btonE{
+    width: 100px;
+    margin-top: 40px;
+    padding: 10px 0px;
+    background: rgb(223, 93, 70);
+    border: 0;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+#lap{
+    bottom: -10px;
+    position: relative;
+font-size: 15px;
+margin-top: 10px;
+left: 310px;
+}
+
+
